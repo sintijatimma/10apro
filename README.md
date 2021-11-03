@@ -1,2 +1,2 @@
 # 10apro
-Sveiki, Šīs ir RedMe fails
+Repozitorija īpašnieks Vjačesdavs Gaidamaka
