@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logoritmi</title>
+<meta charset="UTF-8">
+
+<script>
+function main() {
+    var a;
+    var b;
+    var c;
+    
+    a = window.prompt('Enter a value for a');
+    b = window.prompt('Enter a value for b');
+    c = window.prompt('Enter a value for c');
+    if (a > b) {
+        if (a > c) {
+            window.alert("a-first");
+            window.alert("c-second");
+            window.alert("b-third");
+        } else {
+            if (b > c) {
+                window.alert("a-first");
+                window.alert("b-second");
+                window.alert("c-third");
+            } else {
+                window.alert("a-first");
+                window.alert("c-second");
+                window.alert("b-third");
+            }
+        }
+    } else {
+        if (c > b) {
+            window.alert("c-first");
+            window.alert("b-second");
+            window.alert("a-third");
+        } else {
+            window.alert("b-first");
+            window.alert("a-second");
+            window.alert("c-third");
+        }
+    }
+}
+
+
+
+</script>
+</head>
+<body>
+<button onclick=main();> Enter numbers </button>
+
+</body>
+</html>

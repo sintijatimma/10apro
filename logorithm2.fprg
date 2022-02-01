@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-01 07:50:23 "/>
+        <attribute name="created" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wMTsiMDc6Mzg6NDggIjsyNTc4"/>
+        <attribute name="edited" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wMTsiMDc6NTA6MjMgIjsxOzI2NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a&gt;b">
+                <then>
+                    <if expression="a&gt;c">
+                        <then>
+                            <output expression="&quot;a-first&quot;" newline="True"/>
+                            <output expression="&quot;c-second&quot;" newline="True"/>
+                            <output expression="&quot;b-third&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="b&gt;c">
+                                <then>
+                                    <output expression="&quot;a-first&quot;" newline="True"/>
+                                    <output expression="&quot;b-second&quot;" newline="True"/>
+                                    <output expression="&quot;c-third&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;a-first&quot;" newline="True"/>
+                                    <output expression="&quot;c-second&quot;" newline="True"/>
+                                    <output expression="&quot;b-third&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="c&gt;b">
+                        <then>
+                            <output expression="&quot;c-first&quot;" newline="True"/>
+                            <output expression="&quot;b-second&quot;" newline="True"/>
+                            <output expression="&quot;a-third&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;b-first&quot;" newline="True"/>
+                            <output expression="&quot;a-second&quot;" newline="True"/>
+                            <output expression="&quot;c-third&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
