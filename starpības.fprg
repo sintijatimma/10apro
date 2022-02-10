@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mrant"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 08:02:34 "/>
+        <attribute name="created" value="bXJhbnQ7REVTS1RPUC1NN1EzN0IwOzIwMjItMDItMDg7MDc6MjY6MDAgUE07MjgzNw=="/>
+        <attribute name="edited" value="bXJhbnQ7REVTS1RPUC1NN1EzN0IwOzIwMjItMDItMDg7MDc6Mjg6NDIgUE07MTsyOTUz"/>
+        <attribute name="edited" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDg6MDI6MzQgIjsxOzI2ODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <if expression="a-b&gt;=0">
+                <then>
+                    <output expression="a-b" newline="True"/>
+                </then>
+                <else>
+                    <output expression="b-a" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 07:46:54 "/>
+        <attribute name="created" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDc6Mjg6MTYgIjsyNTc5"/>
+        <attribute name="edited" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDc6NDY6NTMgIjsxOzI2ODg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="(a+b)&gt;c">
+                <then>
+                    <if expression="(a+c)&gt;b">
+                        <then>
+                            <if expression="(b+c)&gt;a">
+                                <then>
+                                    <output expression="&quot;var uzkonstru&#275;t trijst&#363;ri&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;nevar uzkonstru&#275;t trijst&#363;ri&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;nevar uzkonstru&#275;t trijst&#363;ri&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;nevar uzkonstru&#275;t trijst&#363;ri&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mrant"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 07:56:49 "/>
+        <attribute name="created" value="bXJhbnQ7REVTS1RPUC1NN1EzN0IwOzIwMjItMDItMDg7MDc6MTY6MjYgUE07Mjg0NA=="/>
+        <attribute name="edited" value="bXJhbnQ7REVTS1RPUC1NN1EzN0IwOzIwMjItMDItMDg7MDc6MjU6NTkgUE07MjsyOTU5"/>
+        <attribute name="edited" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDc6NTY6NDkgIjsxOzI2OTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="b^2-4*a*c&gt;=0">
+                <then>
+                    <if expression="b^2-4*a*c=0">
+                        <then>
+                            <output expression="&quot;Viena sakne&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Divas saknes&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Nav re&#257;lu sak&#326;u&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

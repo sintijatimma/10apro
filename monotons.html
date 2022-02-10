@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logoritmi</title>
+<meta charset="UTF-8">
+
+<script>
+function main() {
+    var a;
+    
+    a = 1*(window.prompt('Enter a value for a'));
+    if (a / 10 - (double) (a % 10) / 10 == a % 10) {
+        window.alert("Monotons");
+    } else {
+        if (a / 10 - (double) (a % 10) / 10 < a % 10) {
+            window.alert("Augošs");
+        } else {
+            window.alert("Dilstošs");
+        }
+    }
+}
+
+</script>
+</head>
+
+<body>
+<button onclick="main();">Enter number</button>
+
+</body>
+</html>

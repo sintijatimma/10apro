@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="mrant"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 08:06:31 "/>
+        <attribute name="created" value="bXJhbnQ7REVTS1RPUC1NN1EzN0IwOzIwMjItMDItMDg7MDc6Mjk6MTggUE07Mjg0OQ=="/>
+        <attribute name="edited" value="bXJhbnQ7REVTS1RPUC1NN1EzN0IwOzIwMjItMDItMDg7MDc6NTY6NDAgUE07MTsyOTUy"/>
+        <attribute name="edited" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDg6MDY6MzEgIjsxOzI2ODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Real" array="False" size=""/>
+            <input variable="A"/>
+            <if expression="A/10 - (A%10)/10 == A%10">
+                <then>
+                    <output expression="&quot;Monotons&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="A/10 - (A%10)/10 &lt; A%10">
+                        <then>
+                            <output expression="&quot;Augo&#353;s&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Dilsto&#353;s&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

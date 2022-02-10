@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logoritmi</title>
+<meta charset="UTF-8">
+
+<script>
+function main() {
+    var a;
+    var b;
+    var c;
+    
+    a = 1*(window.prompt('Enter a value for a'));
+    b = 1*(window.prompt('Enter a value for b'));
+    c = 1*(window.prompt('Enter a value for c'));
+    if (a + b > c) {
+        if (a + c > b) {
+            if (b + c > a) {
+                window.alert("var uzkonstruēt trijstūri");
+            } else {
+                window.alert("nevar uzkonstruēt trijstūri");
+            }
+        } else {
+            window.alert("nevar uzkonstruēt trijstūri");
+        }
+    } else {
+        window.alert("nevar uzkonstruēt trijstūri");
+    }
+}
+
+</script>
+</head>
+
+<body>
+<button onclick="main();">Enter number</button>
+
+</body>
+</html>

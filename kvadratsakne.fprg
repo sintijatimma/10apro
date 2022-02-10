@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 07:27:11 "/>
+        <attribute name="created" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDc6MjE6MDAgIjsyNTY1"/>
+        <attribute name="edited" value="QWNlcjtERVNLVE9QLUE5RTc0MEw7MjAyMi0wMi0wODsiMDc6Mjc6MTEgIjsxOzI2ODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <if expression="a&gt;0">
+                <then>
+                    <output expression="sqrt(a)" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;T&#257;da darb&#299;ba nav iesp&#275;jama &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
