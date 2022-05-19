@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CANVAS</title>
+<meta charset="UTF-8">
+
+<script>
+function add_me(){
+var a;
+a=document.getElementById("send").value;
+let cl='rgb('+a+','+a+','+a+')';
+document.body.style.backgroundColor=cl;
+}
+function color(){
+let b = document.getElemetById("bodyc").value;
+console.log(b);
+document.body.style.backgroundColor=b;
+
+
+
+</script>
+</head>
+
+<body>
+
+<input type="range" min="0" max="255" id="send" onchange="add_me">
+<input type="color" id="bodyc" name="bodyc">
+</body>
+</html>

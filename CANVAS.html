@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS</title>
+<h1>Line</h1>
+<canvas id="myCanvas">
+
+
+
+<script>
+// line
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.strokeStyle = 'red';
+    ctx.lineWidth = 5;
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(300, 150);
+ctx.stroke();
+
+
+</script>
+</head>
+
+<body>
+
+
+</body>
+</html>

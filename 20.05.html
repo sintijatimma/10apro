@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Work with radio boxes</title>
+<meta charset="utf-8">
+<script>
+var a=0;
+var b=0;
+var s=0;
+function st1(a,b) {
+s = a*b;
+return s;
+}
+function apr(){
+a = parseFloat(document.getElementById("t1").value);
+b = parseFloat(document.getElementById("t2").value);
+st1(a,b);
+}
+function box1(radio) {
+a = a/1000;
+alert(a*1000 + " mm ===> " + a + " m");
+}
+function box2(radio) {
+a = a/100;
+alert(a*100 + " cm ===> " + a + " m");
+}
+function box3(radio) {
+a = a*1000;
+alert(a/1000 + " km ===> " + a + " m");
+}
+function box4(radio) {
+b = b/1000;
+alert(b*1000 + " mm ===> " + b + " m");
+}
+function box5(radio) {
+b = b/100;
+alert(b*100 + " cm ===> " + b + " m");
+}
+function box6(radio) {
+b = b*1000;
+alert(b/1000 + " km ===> " + b + " m");
+}
+function lauk(){
+s = a*b;
+alert("Laukums " + s + " m")
+}
+</script>
+</head>
+<body>
+<input type="button" id="g" value="Saglabat ievaditus skaitlus" onclick="apr()"></input>
+</br>
+</br>
+<input type="text" id="t1"></input>
+<div>
+<input type="radio" id="mail" name="contact" value="mm" onchange="box1(this)">
+<label for="mail">mm</label>
+<input type="radio" id="mail" name="contact" value="m" onchange="box2(this)">
+<label for="mail">cm</label>
+<input type="radio" id="mail" name="contact" value="km" onchange="box3(this)">
+<label for="mail">km</label>
+</div>
+</br>
+<input type="text" id="t2"></input>
+<div>
+<input type="radio" id="mail" name="contact" value="mm" onchange="box4(this)">
+<label for="mail">mm</label>
+<input type="radio" id="mail" name="contact" value="m" onchange="box5(this)">
+<label for="mail">cm</label>
+<input type="radio" id="mail" name="contact" value="km" onchange="box6(this)">
+<label for="mail">km</label>
+</div>
+</br>
+<input type="button" id="g" value="Laukums" onclick="lauk()"></input>
+</body>
+</html>
+
