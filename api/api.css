@@ -1,0 +1,9 @@
+* {
+  margin: 10;
+  padding: 0;
+}
+P.blocktext{
+	margin-left: auto;
+	margin-right: auto;
+	width: 6em
+}
