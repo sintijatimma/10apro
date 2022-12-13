@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<button id="pic" onclick="imgRandom()">
+<script>
+var imgArray = ["a.jpg", "b.jpg", "c.jpg", "d.jpg", "f.jpg"];
+var basePath="massive";
+
+function imgRandom() {
+    for (var i = 0; i < 5; i++) {
+        var rand = imgArray[Math.floor(Math.random() * imgArray.length)];
+        var image = new Image();
+        image.src = basePath+rand;
+        document.body.appendChild(image);
+    }
+}
+</script>
+</body>
+</html>

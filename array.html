@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+
+</head>
+<body>
+
+<script>
+//function getimages(){
+let images = new Array();
+
+randomImage[0] ="a.jpg";
+randomImage[1] = "b.jpg";
+randomImage[2] = "c.jpg"; 
+randomImage[3] = "d.jpg";
+randomImage[4] = "f.jpg";
+
+function getimage() { 
+var number = Math.floor(Math.random()*randomImage.length);
+document.write('<img src="'+randomImage[number]+'" />');
+}
+getimage()
+<!--let number = Math.floor(Math.random()*randomImage.length);
+<!--return document.getElementById("result").innerHTML = '<img src="'+randomImage[number]+'" />'; 
+//var j = 0;
+//document.getElementById.src = imgArray["a.jpg"].src;
+
+}
+</script>
+<button onclick = "getimage"> Generate Image </button> 
+</body>
+</html>
