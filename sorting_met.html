@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <title>Pētījums</title>
+<head>
+</head>
+<body>
+<script>
+function main() {
+    var n, i, j, k;
+    
+    window.alert("Please input how many numbers you want in an array");
+    n = Number(window.prompt('Enter a value for n'));
+    var data = createArray(n);
+    
+    for (i = 0; i <= n - 1; i++) {
+        window.alert("Input " + i + " element");
+        data[i] = Number(window.prompt('Enter a value for data[i]'));
+    }
+    window.alert("Input:");
+    window.alert("[ ");
+    for (i = 0; i <= n - 1; i++) {
+        window.alert("" + data[i]);
+    }
+    window.alert(" ]");
+    quickSort(data, 0, n - 1);
+    window.alert("Sorted array:");
+    window.alert("[ ");
+    for (i = n - 1; i >= 0; i--) {
+        window.alert(" " + data[i]);
+    }
+    window.alert(" ]");
+}
+
+function partial(data, low, high) {
+    var indexpartial;
+    var pivot, i, j, temp;
+    
+    pivot = data[high];
+    i = low - 1;
+    for (j = low; j <= high - 1; j++) {
+        if (data[j] > pivot) {
+            i = i + 1;
+            temp = data[i];
+            data[i] = data[j];
+            data[j] = temp;
+        }
+    }
+    temp = data[i + 1];
+    data[i + 1] = data[high];
+    data[high] = temp;
+    indexpartial = i + 1;
+    
+    return indexpartial;
+}
+
+function quickSort(data, low, high) {
+    if (low < high) {
+        var indexpartial;
+        
+        indexpartial = partial(data, low, high);
+        quickSort(data, low, indexpartial - 1);
+        quickSort(data, indexpartial + 1, high);
+    }
+}
+</script>
+<button type="button" onclick="main()" class="button_css">ievadiet ciparus</button>
+</body>
+</html>
