@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="sort()">Click</button>
+
+
+<script type="text/javascript">
+  function sort() {
+    function swap(array, i, j) {
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+
+  function partition(array, low, high) {
+
+      let pivot = array[high];
+
+      let i = low - 1;
+
+      for (let j = low; j <= high - 1; j++){
+          if (array[j] < pivot) {
+              i = i + 1;
+
+              swap(array, i, j);
+          }
+      }
+
+      swap(array, i + 1, high);
+      return (i + 1);
+  }
+  function quick_sort(array, low, high) {
+      if (low < high) {
+
+          let pi = partition(array, low, high);
+
+          quick_sort(array, low, pi - 1);
+
+          quick_sort(array, pi + 1, high);
+      }
+  }
+
+  function printArray(arr, size) {
+      for (let i = 0; i < size; i++)
+          document.write(arr[i] + " ");
+
+      document.write("<br>");
+  }
+
+  //array = parseFloat(array)
+  let n = prompt("Input n: ");
+  let array = [];
+  for(var j=0; j < n; j++){
+   array[j] = prompt('Enter array Element' + (j+1));
+   }
+/*  for (let j = 0; j < n; j++) {
+      array[j] = prompt("Number" + j + ":")
+  }
+  */
+ // let array = prompt("Input array: ").split(",");
+  //let array = [10, 7, 8, 9, 1, 5, 36];
+
+ // let n = array.length;
+
+  quick_sort(array, 0, n - 1);
+  document.write("Sorted array: <br>");
+  document.write(array)
+  }
+
+</script>
+  </body>
+</html>
