@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #01526e;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+    </style>
+  </head>
+  <body>
+    <h1>QuickSort implementācija masīvu kārtošanai</h1>
+    <button type="button" name="sort" onclick="input_array()">Press to input n</button>
+    <button type="button" name="save" onclick="save()">Save</button>
+    <button type="button" name="upload" onclick="upload()">Upload and sort</button>
+    <div class="List">
+      <ol>
+        <li>Uzspiediet uz <i>Press to input n</i>. Izkrītošajā logā ievadiet skaitli n - cik elementu būs masīvā.</li>
+        <li>Uzspiediet uz <i>Save</i>, lai lejupielādētu nesakārtotu masīvu .txt failā.</li>
+        <li>Uzspiediet uz <i>Upload and sort</i>, lai augšuplādētu masīvu un sakārtotu to augošā secībā.</li>
+        <li>Uzspiediet uz <i>Save</i>, lai lejupielādētu sakārtotu masīvu .txt failā.</li>
+      </ol>
+    </div>
+    <p>Sakārtotie masīvi:</p>
+    <p id="list"></p>
+  </body>
+</html>
+
+<script type="text/javascript">
+  var n = [];
+  var array = [];
+
+  function input_array() {
+    let n = prompt("Input n: ");
+
+    for (var j = 0; j < n; j++) {
+        array[j] = Math.floor(Math.random() * 100);
+    }
+  };
+
+  function upload() {
+    var input = document.createElement('input');
+    input.type = 'file';
+
+    input.onchange = e => {
+     var file = e.target.files[0];
+     var reader = new FileReader();
+     reader.readAsText(file,'UTF-8');
+     reader.onload = readerEvent => {
+        var myarray = readerEvent.target.result;
+        console.log("Original array: " + myarray);
+        array = myarray.split(',')
+        array = array.map(element => {
+          return Number(element);
+        })
+        quickSort(array, 0, array.length-1);
+        console.log("Sorted array: " + array);
+        const para = document.createElement("p");
+        const node = document.createTextNode(array);
+        para.appendChild(node);
+
+        const element = document.getElementById("list");
+        element.appendChild(para);
+       }
+    }
+    input.click();
+  };
+
+  function save() {
+    var c = document.createElement("a");
+    c.download = "array.txt";
+
+    var t = new Blob([array], { type: "text/html" });
+    c.href = window.URL.createObjectURL(t);
+    c.click();
+  };
+
+  function swap(arr, i, j) {
+      let temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+  }
+  function partition(arr, low, high) {
+      let pivot = arr[high];
+      let i = (low - 1);
+
+      for (let j = low; j <= high - 1; j++) {
+          if (arr[j] < pivot) {
+              i++;
+              swap(arr, i, j);
+          }
+      }
+      swap(arr, i + 1, high);
+      return (i + 1);
+  }
+
+  function quickSort(arr, low, high) {
+      if (low < high) {
+          let pi = partition(arr, low, high);
+          quickSort(arr, low, pi - 1);
+          quickSort(arr, pi + 1, high);
+      }
+  }
+
+
+</script>
